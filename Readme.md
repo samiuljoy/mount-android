@@ -1,6 +1,6 @@
 ### Mount android on your Linux system with jmtpfs.
 
-The script android-mount-unmount.sh mounts the android phone in /home/$USER/phone. Make sure to create a directory named phone under /home/$USER/.
+The script android-mount-unmount.sh mounts the android phone in `/home/$USER/phone`. Make sure to create a directory named phone under `/home/$USER/`.
 
 Copy this script to /usr/local/bin or any executable directory under $PATH. Then plug in your android device and run `android-unmount-mount.sh` and it will mount the android in your /home/$USER/phone directory.  And to unmount just run `android-unmount-mount.sh` again. Simple as that.
 
@@ -14,8 +14,10 @@ Copy this script to /usr/local/bin or any executable directory under $PATH. Then
 * libmtp9
 * libstdc++6
 * fuse
+* libnotify-bin(for notifying the user that android has been mounted/unmounted)
 
 Note: If you're on debian, you can install jmtpfs with;
+
 ```sh
 apt install jmtpfs
 ```
