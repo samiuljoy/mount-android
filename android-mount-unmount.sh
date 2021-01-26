@@ -12,6 +12,7 @@ if [[ $? == 0 ]]; then
 				notify-send "Android mounted on /home/$USER/phone"
 			else
 				notify-send "Something went wrong while mounting Android fs..."
+				exit 255;
 			fi
 		else
 			notify-send "Unmounting Android phone.."
@@ -20,6 +21,7 @@ if [[ $? == 0 ]]; then
 				notify-send "Android unmounted properly"
 			else
 				notify-send "Android isn't unmounted properly, better to check that out manually"
+				exit 255;
 			fi
 		fi
 	fi
