@@ -1,5 +1,5 @@
 #!/bin/bash
-jmtpfs -l | grep -i -e mtp -e mtk -e mediatek -e samsung -e htc -e motorolla -e nokia -e plus -e pine
+jmtpfs -l
 if [[ $? == 0 ]]; then
 	if [[ $(id -u) == 0 ]]; then
 		notify-send "WHY THE HELL ARE YOU RUNNING THIS AS ROOT?"
